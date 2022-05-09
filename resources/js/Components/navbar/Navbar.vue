@@ -36,17 +36,18 @@
                     v-for="category in categories"
                     :key="category.route"
                     :href="category.route"
-                    class="text-gray-100 hover:text-indigo-400"
+                    class="dark:text-gray-100 hover:text-indigo-400"
                 >
                     {{ category.name }}
                 </Link>
 
+                <!-- TODO: Verificar que se vea bien en DARK/LIGHT mode -->
                 <n-divider vertical />
                 <!-- Profile -->
                 <Link
                     v-if="$page.props.user"
                     :href="route('dashboard')"
-                    class="text-gray-100 hover:text-indigo-400"
+                    class="dark:text-gray-100 hover:text-indigo-400"
                 >
                     Mi perfil
                 </Link>
@@ -54,14 +55,14 @@
                 <template v-else>
                     <Link
                         :href="route('login')"
-                        class="text-gray-100 hover:text-indigo-400"
+                        class="dark:text-gray-100 hover:text-indigo-400"
                     >
                         Iniciar Sesión
                     </Link>
 
                     <Link
                         :href="route('register')"
-                        class="text-gray-100 hover:text-indigo-400"
+                        class="dark:text-gray-100 hover:text-indigo-400"
                     >
                         Registrarse
                     </Link>
